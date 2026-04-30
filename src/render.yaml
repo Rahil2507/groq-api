@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: sdg7-chatbot-api
+    runtime: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    autoDeploy: true
+    envVars:
+      - key: GROQ_API_KEY
+        sync: false

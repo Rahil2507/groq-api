@@ -13,6 +13,10 @@ app.get("/", (req, res) => {
   res.send("API running");
 });
 
+app.get("/check", (req, res) => {
+  res.status(200).end();
+});
+
 app.use("/api", chatRoutes);
 
 app.listen(PORT, () => {
